@@ -1,0 +1,931 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: 'Gemunu Libre', sans-serif;
+    color: white;
+}
+
+.container{
+    width: 95%;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    height: 100%; 
+    object-fit: contain;
+}
+
+main{
+    position: absolute;
+    width: 100%;
+}
+
+/* Barra de Navegacion Uno y Dos*/
+.navUno,.navDos{
+    width: 100%;
+    background: conic-gradient(from 178.91deg at 42.36% -176.18%, rgba(255, 142, 230, 0) -5.63deg,
+    rgba(209, 20, 168, 0.88) 11.25deg, rgba(255, 142, 230, 0) 354.37deg, rgba(209, 20, 168, 0.88) 371.25deg);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    z-index: 10;
+}
+
+.navUnoContenido,.navDosContenido{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navUno .navUnoLogo{
+    width: 20%;
+    height: 70px; 
+}
+
+.navUno .material-symbols-outlined, .navDos .material-symbols-outlined{
+    font-size: 35pt;
+    display: block;
+    display: flex;
+    align-items: center;
+}
+
+.navUno .navUnoUl,.navDos .navDosUl{
+    background-color: #88039ce5;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    list-style: none;
+    top: 70px;
+    left: 0;
+}
+
+.navUno .navUnoUl li .navUnoList, .navDos .navDosUl li .navDosList{
+    margin: 20px 0;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 22pt;
+}
+.navUno .navUnoUl li .navUnoList:hover, .navDos .navDosUl li .navDosList:hover{
+    color: #bdeff0;
+}
+
+.navUno .navUnoUl li .navActive, .navDos .navDosUl li .navActive{
+    border-bottom: 2px solid #c1eaee;
+}
+
+.navUno .verNav, .navDos .verNav{
+    display: none;
+}
+
+/* barra de navegacion Dos */
+.navDos{
+    position: sticky;
+    top: 0;
+}
+
+.navDos .navDosLogo{
+    width: 20%;
+    height: 60px;
+}
+
+.navDos .navDosUl li .navDosList{
+    font-size: 14pt;
+}
+
+.navDos .material-symbols-outlined{
+    font-size: 20pt;
+}
+
+
+/* Sección uno*/
+.seccionUno{
+    height: 100vh;
+    background-image: url(../img/backHomeLiquid.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #F8CAFF;
+    z-index: 0;
+}
+
+.seccionUnoGrid{
+    height: 100vh;
+    padding-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.seccionUnotitulo{
+    background-color: rgba(0, 0, 0, 0.678);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 2px solid #F8CAFF;
+    padding: 0 20px;
+}
+.seccionUnotitulo h1{
+    margin: 30px 0 30px 0;
+    font-size: 50pt;
+    font-weight: 300;
+}
+
+.seccionUnotitulo h2{
+    margin: 30px 0 30px 0;
+    font-size: 30pt;
+    font-weight: normal;
+    display: none;
+}
+
+.seccionUnoSubtitulo{
+    background-color: rgba(0, 0, 0, 0.678);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 2px solid #F8CAFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.seccionUnoSubtitulo .showreel {
+    text-decoration: none;
+}
+
+.seccionUnoSubtitulo:hover {
+    background-color: #43107a;
+}
+
+.seccionUnoSubtitulo h3{
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 30pt;
+    font-weight: 500;
+    color: #F8CAFF;
+}
+
+.seccionUnoAnotacion{
+    background-color: rgba(0, 0, 0, 0.678);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 2px solid #F8CAFF;
+    display: flex;
+    align-items: center;
+    display: none;
+    padding: 10px;
+}
+
+.seccionUnoAnotacion .anotacionUno{
+    margin: 0;
+    font-size: 20pt;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.seccionUnoSocial{
+    border-left: 2px solid #F8CAFF;
+    display: flex;
+    justify-content: center;
+}
+
+.seccionUnoSocial .socialUno{
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 25pt;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #9a3bfa50;
+    -webkit-backdrop-filter: blur(3x);
+    backdrop-filter: blur(3px);
+    border: 2px solid #F8CAFF;
+}
+
+
+
+/* Sección Nosotros / Sección Nosotros*/
+
+.seccionNosotros{
+    background-image: url(../img/OilRedTear.png);
+    background-repeat:  no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.contenidoNosotros{
+    height: 160vh;
+}
+
+.contenidoNosotrosSticky{
+    height: 70vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccionNosotrosTextoNosotros, .seccionNosotrosTextoHistoria{
+    height: 50vh;
+    color: #F8CAFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.seccionNosotrosTextoNosotros p, .seccionNosotrosTextoNosotros h4, .seccionNosotrosTextoHistoria p, .seccionNosotrosTextoHistoria h4{
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccionNosotrosTextoNosotros h4, .seccionNosotrosTextoHistoria h4{
+    font-size: 40pt;
+    font-weight: normal;
+}
+.seccionNosotrosTextoNosotros p, .seccionNosotrosTextoHistoria p{
+    padding: 0 25px;
+    font-size: 15pt;
+}
+
+
+
+/*Sección Servicios*/
+
+.seccionServicios, .seccionProyectos, .seccionTalentos{
+    background-image: url(../img/jake-weirick-Q_RBVFFXR_g-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.seccionTituloDos{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #F8CAFF;
+}
+
+.seccionTituloDos h5{
+    color: #F8CAFF;
+    font-size: 50pt;
+    font-weight: bolder;
+    margin: 50px 0px;
+}
+
+/*Galería Uno*/
+
+.galeriaUno, .galeriaDos{
+    padding: 150px 0;
+}
+
+.galeriaUno .galeriaUnoLinkImg, .galeriaDos .galeriaDosLinkImg{
+    display: block;
+    height: 400px;
+    width: 400px;
+}
+
+.galeriaUno .galeriaUnoLinkImg img, .galeriaDos .galeriaDosLinkImg img{
+    width: 100%;
+    object-fit: contain;
+}
+
+
+/*Banner*/
+
+.bannerUno, .bannerDos{
+    height: 150px;
+    background-image: url(../img/8machine-_-9SS3n6hhMBY-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.textoBannerUno, .textoBannerDos{
+    display: block;
+    width: 300%;
+    font-size: 100pt;
+    color: #87039C;
+    text-transform: uppercase;
+    margin: 0;
+
+}
+
+
+/*Footer*/
+
+footer {
+    background-image: url(../img/jake-weirick-Q_RBVFFXR_g-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footerGrid{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    padding-top: 50px;
+    background-color: #ebd4ee;
+    background-size: 250%;
+    background-position: center top;
+    color: #87039C;
+    font-size: 20pt;
+    border-radius: 50px;
+    gap: 15px;
+}
+
+.footerH5{
+    font-size: 40pt;
+    font-weight: bolder;
+    margin: 0;
+    text-align: center;
+}
+
+.footerUl{
+    list-style: none;
+    padding: 0 25px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footerUl li{
+    display: block;
+    margin: 10px 20px;
+    font-weight: 500;
+}
+
+.footerFormMain{
+    background-color: #88039c73;
+    padding: 20px;
+    border-radius: 35px;
+    color: white;
+    line-height: 30pt;
+}
+
+.footerFormMain p{
+    margin-bottom: 0;
+}
+
+.footerForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.footerFormDown{
+    align-self: center;
+}
+
+.footerFormUp, .footerFormMid, .footerFormDown{
+    margin: 10px 0;
+}
+
+.footerForm input[type=text], .footerForm input[type=email]{
+    margin: 0;
+    display: block;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #87039C;
+    background-color: #88039c00;
+    outline: none;
+    width:100%;
+}
+
+.footerForm input[type=email]{
+    margin-top: 20px;
+}
+
+.footerForm #formAreaInteres{
+    width: 100%;
+}
+
+.footerForm input[type=text]::placeholder, .footerForm input[type=email]::placeholder{
+    font-family: 'Gemunu Libre', sans-serif;
+    color: #87039C;
+    font-size: 15pt;
+}
+
+.footerForm input[type=submit]{
+    height: 50px;
+    width: 200px;
+    background-color: #F8CAFF;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 50px;
+    font-family: 'Gemunu Libre', sans-serif;
+    color: #87039C;
+    font-size: 15pt;
+    font-weight: 500;
+}
+
+
+/* Div de créditos*/
+
+.credits {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80px;
+}
+
+
+.credits p {
+    color: #ebd4ee;
+    font-size: 12pt;
+    font-weight: 200;
+    padding: 5px;
+}
+
+
+/* Página Proyectos*/
+.proyectos {
+    padding-bottom: 200px;
+    background-image: url(../img/jake-weirick-Q_RBVFFXR_g-unsplash.jpg);
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+.containerProyectos {
+    width: 80%;
+    margin: auto;
+    padding-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    column-gap: 150px;
+    row-gap: 150px;
+    justify-items: center;
+}
+
+#proyectos1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#proyectos2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#proyectos3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#proyectos4 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+#proyectos5 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+#proyectos6 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+}
+
+#proyectos7 {
+    grid-column: 1/2;
+    grid-row: 7/8;
+}
+
+#proyectos8 {
+    grid-column: 1/2;
+    grid-row: 8/9;
+}
+
+#proyectos9 {
+    grid-column: 1/2;
+    grid-row: 9/10;
+}
+
+.proyectosCelda {
+    width: 100%;
+    height: 100%;
+}
+
+.proyectosContenido {
+    width: 100%;
+    object-fit: cover;
+}
+
+.proyectosDes {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.proyectosDes p{
+    transition: all 1s ease;
+    translate: 0 50px;
+    position: absolute;
+    padding: 20px 10px;
+    line-height: 20px;
+    margin: 0;
+    bottom: 0;
+    background-color: #9a1c9486;
+    opacity: 0;
+}
+
+.proyectosDes:hover p{
+    translate: 0 0px;
+    opacity: 100%;
+}
+
+
+/* Página Talentos*/
+
+.talentos {
+    padding-bottom: 200px;
+    background-image: url(../img/jake-weirick-Q_RBVFFXR_g-unsplash.jpg);
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+.containerTalentos {
+    width: 80%;
+    margin: auto;
+    padding-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    column-gap: 150px;
+    row-gap: 150px;
+    justify-items: center;
+}
+
+#talentos1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#talentos2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#talentos3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#talentos4 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+#talentos5 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+#talentos6 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+}
+
+#talentos7 {
+    grid-column: 1/2;
+    grid-row: 7/8;
+}
+
+#talentos8 {
+    grid-column: 1/2;
+    grid-row: 8/9;
+}
+
+#talentos9 {
+    grid-column: 1/2;
+    grid-row: 9/10;
+}
+
+.talentosCelda {
+    width: 100%;
+    height: 100%;
+}
+
+.talentosContenido {
+    width: 100%;
+    object-fit: cover;
+}
+
+.talentosDes {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.talentosDes p {
+    display: none;
+}
+
+.talentosDes:hover p{
+    margin: 0;
+    position: absolute;
+    bottom: 0px;
+    background-color: #9a1c9486;
+    padding: 20px 10px;
+    line-height: 20px;
+    display: block;
+}
+
+
+
+/* Página Tienda / Sección Tienda*/
+
+.tienda {
+    padding-bottom: 200px;
+    background-image: url(../img/jake-weirick-Q_RBVFFXR_g-unsplash.jpg);
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+.containerTienda {
+    width: 80%;
+    margin: auto;
+    padding-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:repeat(9, 1fr);
+    column-gap: 150px;
+    row-gap: 150px;
+    justify-items: center;
+}
+
+#tienda1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+} 
+
+#tienda2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#tienda3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#tienda4 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+#tienda5 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+#tienda6 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+}
+
+#tienda7 {
+    grid-column: 1/2;
+    grid-row: 7/8;
+}
+
+#tienda8 {
+    grid-column: 1/2;
+    grid-row: 8/9;
+}
+
+#tienda9 {
+    grid-column: 1/2;
+    grid-row: 9/10;
+}
+
+
+.tiendaCelda {
+    width: 100%;
+    height: 100%;
+}
+
+.tiendaContenido {
+    width: 100%;
+    object-fit: cover;
+}
+
+.tiendaDes {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.tiendaDes p {
+    display: none;
+}
+
+.tiendaDes:hover p{
+    margin: 0;
+    position: absolute;
+    bottom: 0px;
+    background-color: #9a1c9486;
+    padding: 20px 10px;
+    line-height: 20px;
+    display: block;
+}
+
+
+/* Página Contacto / Sección Contacto*/
+
+.contacto {
+    background-image: url(../img/backHomeLiquid.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #F8CAFF;
+    padding-top: 70px;
+    border-bottom: 50px solid #F8CAFF;
+}
+
+.contactoForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.contactoFormDown{
+    align-self: center;
+}
+
+.contactoFormUp, .contactoFormMid, .contactoFormDown{
+    margin: 10px 0;
+}
+
+.contactoForm input[type=text], .contactoForm input[type=email]{
+    margin: 0;
+    display: block;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #F8CAFF;
+    background-color: #88039c00;
+    outline: none;
+    width:100%;
+}
+
+.contactoForm input[type=email]{
+    margin-top: 20px;
+}
+
+.contactoForm #formAreaInteres{
+    width: 100%;
+}
+
+.contactoForm input[type=text]::placeholder, .contactoForm input[type=email]::placeholder{
+    font-family: 'Gemunu Libre', sans-serif;
+    color: #F8CAFF;
+    font-size: 15pt;
+}
+
+.contactoForm input[type=submit]{
+    height: 50px;
+    width: 200px;
+    background-color: #F8CAFF;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 50px;
+    font-family: 'Gemunu Libre', sans-serif;
+    color: #87039C;
+    font-size: 15pt;
+    font-weight: 500;
+}
+
+
+.contactoTitulo, .contactoSubtitulo, .contactoAnotacion, .contactoSocial, .contactoRedes{
+    background-color: #111111b6;
+    padding: 20px;
+    border: 2px solid #F8CAFF;
+    border-radius: 25px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.call h1{
+    font-size: 50pt;
+    text-align: center;
+}
+
+.contactoSubtitulo, .contactoAnotacion, .contactoSocial, .contactoRedes{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.contactoSubtitulo h3{
+    margin: 0;
+    font-size: 20pt;
+    padding: 10px 0;
+}
+
+.contactoAnotacion .info{
+    font-size: 15pt;
+    margin: 10px 0;
+}
+
+.contactoRedes .socialUno{
+    font-size: 20pt;
+    margin: 10px 0;
+}
+
+.contactoRedes .redes{
+    list-style: none;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.contactoRedes .redes .contactoEnlaces{
+    padding: 10px;
+}
+
+.contactoIframe{
+    width: 100%;
+    filter: invert(100%) saturate(1.5);
+    padding: 25px 25px 0 25px;
+}
+
+
+/* Pagina Nosotros*/
+
+.paginaNosotros{
+    background-image: url(../img/OilRedTear.png);
+    background-repeat:  no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.contenidoPaginaNosotros{
+    height: 170vh;
+}
+
+.contenidoPaginaNosotrosSticky{
+    height: 80vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginaNosotrosSeccionTexto{
+    height: 50vh;
+    color: #F8CAFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.paginaNosotrosSeccionTexto p, .paginaNosotrosSeccionTexto h4{
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginaNosotrosSeccionTexto h4{
+    font-size: 40pt;
+    font-weight: normal;
+    text-align: center;
+}
+.paginaNosotrosSeccionTexto p{
+    padding: 0 25px;
+    font-size: 15pt;
+}

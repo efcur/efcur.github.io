@@ -1,0 +1,369 @@
+/* Estilos para computador */
+
+
+@media screen and (min-width: 1024px) {
+
+
+    /*Barra de Navegación*/
+    
+    .navUno .navUnoUl li .navUnoList, .navDos .navDosUl li .navDosList{
+        font-size: 20pt;
+    }
+
+
+    /*Sección Uno*/
+
+    .seccionUnoGrid{
+
+        padding-bottom: 50px;
+        display: grid;
+        grid-template-areas: 
+        ".         .      .       pg1social" 
+        "pg1tit    pg1tit pg1tit  pg1social" 
+        "pg1subtit .      pg1anot pg1social";
+        grid-template-rows: 2fr 2fr 1fr;
+        grid-template-columns: 2fr 2fr 2fr 1fr;
+    }
+        
+    .seccionUnoSubtitulo h3{
+    
+        font-size: 50pt;
+    }
+    
+    .seccionUnoAnotacion .anotacionUno{
+        font-size: 20pt;
+    }
+
+    .seccionUnoSocial .socialUno{
+        padding: 50px 20px;
+        font-size: 40pt;
+        height: 300px;
+        width: auto;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+    }
+
+    /*Sección Nosotros/ Historia*/
+
+
+    .seccionNosotrosTextoNosotros, .seccionNosotrosTextoHistoria{
+        flex-direction: row;
+    }
+    
+    .seccionNosotrosTextoNosotros p, .seccionNosotrosTextoNosotros h4, .seccionNosotrosTextoHistoria p, .seccionNosotrosTextoHistoria h4{
+        width: 50%;
+    }
+    
+    .seccionNosotrosTextoNosotros h4, .seccionNosotrosTextoHistoria h4{
+        font-size: 70pt;
+    }
+    .seccionNosotrosTextoNosotros p{
+        padding-left: 60px;
+        font-size: 25pt;
+        text-align: end;
+    }
+    
+    .seccionNosotrosTextoHistoria p{
+        padding-right: 60px;
+        font-size: 25pt;
+        text-align: start;
+    }
+
+    /*Galería Uno*/
+
+    .slick-next{
+        right: -50px;
+    }
+    
+    .slick-prev{
+        left: -50px;
+    }
+
+
+
+    /*Footer*/
+.footerGrid{
+    display: grid;
+    grid-template-areas:
+    "fot1 fot1 fot1 fot1"
+    "fot1 fot1 fot1 fot1"
+    "fot2 fot3 fot4 fot4"
+    "fot2 fot3 fot4 fot4";
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0px 30px;
+    color: #87039C;
+    font-size: 20pt;
+    gap: 30px;
+}
+
+.footerH5{
+    font-size: 80pt;
+}
+
+.footerUl{
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.footerUl li{
+    margin: 20px 0;
+}
+
+.footerFormMain{
+    margin-bottom: 30px;
+}
+
+.footerFormDown{
+    align-self: flex-end;
+}
+    
+
+
+
+/* Página Proyectos / Sección Proyectos*/
+
+
+.containerProyectos {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 150px;
+    row-gap: 150px;
+    justify-items: center;
+}
+
+#proyectos1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#proyectos2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#proyectos3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+#proyectos4 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#proyectos5 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#proyectos6 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#proyectos7 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#proyectos8 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#proyectos9 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+/* Página Talentos / Sección Talentos*/
+
+
+.containerTalentos {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 150px;
+    row-gap: 150px;
+    justify-items: center;
+}
+
+#talentos1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#talentos2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#talentos3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+#talentos4 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#talentos5 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#talentos6 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#talentos7 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#talentos8 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#talentos9 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+
+/* Página Tienda / Sección Tienda*/
+
+
+.containerTienda {
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+    column-gap: 150px;
+    row-gap: 150px;
+    justify-items: center;
+}
+
+#tienda1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+} 
+
+#tienda2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#tienda3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+#tienda4 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#tienda5 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#tienda6 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#tienda7 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#tienda8 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#tienda9 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#tiendaDescrip1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 10pt;
+    
+}
+
+/* Página de contacto */
+
+.contactoGrid{
+    display: grid;
+    grid-template-areas: 
+    "contact1 contact1 contact1 contact1"
+    "contact2 contact2 contact2 contact5"
+    "contact2 contact2 contact2 contact5"
+    "contact2 contact2 contact2 contact5"
+    "contact3 .        contact4 contact5"
+    ;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 40px;
+}
+
+.call{
+    grid-area: contact1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.call h1{
+    font-size: 70pt;
+}
+
+.contactoTitulo{
+    grid-area: contact2;
+    font-size: 20pt;
+}
+
+.contactoSubtitulo{
+    grid-area: contact3;
+}
+
+.contactoAnotacion{
+    grid-area: contact4;
+}
+
+.contactoRedes{
+    grid-area: contact5;
+}
+
+
+/*Sección Nosotros/ Historia*/
+
+
+.paginaNosotrosSeccionTexto{
+    flex-direction: row;
+}
+
+.paginaNosotrosSeccionTexto p, .paginaNosotrosSeccionTexto h4{
+    width: 50%;
+}
+
+.paginaNosotrosSeccionTexto h4{
+    font-size: 70pt;
+}
+
+.paginaNosotrosSeccionTexto p{
+    padding-right: 60px;
+    font-size: 35pt;
+    text-align: start;
+}
+.paginaNosotrosSeccionTexto p:nth-child(odd){
+
+    text-align: end;
+}
+
+
+}

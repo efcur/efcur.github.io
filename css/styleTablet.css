@@ -1,0 +1,500 @@
+/*Estilos para tablet*/
+
+
+@media screen and (min-width: 760px) {
+
+    .container{
+        width: 80%;
+    }
+    
+    .navUno .navUnoLogo{
+        width: 20%;
+        height: 70px; 
+    }
+    
+    .navUno .material-symbols-outlined, .navDos .material-symbols-outlined{
+        display: none;
+    }
+    
+    .navUno .navUnoUl,.navDos .navDosUl{
+        background: none;
+        -webkit-backdrop-filter: blur(0px);
+        backdrop-filter: blur(0px);
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        position: static;
+
+    }
+    
+    .navUno .navUnoUl li .navUnoList, .navDos .navDosUl li .navDosList{
+        font-size: 15pt;
+    }
+    
+    /* Barra de navegación Dos */
+    .nav-down{
+        position: fixed;
+        top: 0;
+        transition: top 0.2s ease-in-out;
+        width: 100%;
+    }
+    .nav-up {
+        position: fixed;
+        top: -100px;
+    }
+
+
+/*Sección Uno*/
+
+.seccionUnoGrid{
+
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-areas: 
+    "pg1tit pg1tit"
+    "pg1subtit pg1anot"
+    "pg1social pg1anot";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.seccionUnotitulo{
+    grid-area: pg1tit;
+    padding-left: 50px;
+}
+.seccionUnotitulo h1{
+    margin: 30px 0 30px 0;
+    font-size: 70pt;
+}
+
+.seccionUnotitulo h2{
+    font-size: 40pt;
+    display: block;
+}
+
+.seccionUnoSubtitulo{
+    grid-area: pg1subtit;
+}
+
+.seccionUnoSubtitulo h3{
+    font-size: 40pt;
+}
+
+.seccionUnoAnotacion{
+    grid-area: pg1anot;
+    display: flex;
+    align-items: center;
+}
+
+.seccionUnoAnotacion .anotacionUno{
+    font-size: 20pt;
+}
+
+.seccionUnoSocial{
+    grid-area: pg1social;
+    display: block;
+}
+
+.seccionUnoSocial .socialUno{
+    font-size: 30pt;
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Sección Nosotros / Sección Nosotros*/
+
+.seccionNosotrosTextoNosotros, .seccionNosotrosTextoHistoria{
+    height: fit-content;
+}
+
+.seccionNosotrosTextoNosotros h4, .seccionNosotrosTextoHistoria h4{
+    font-size: 60pt;
+    margin: 0;
+    margin-bottom: 40px;
+}
+.seccionNosotrosTextoNosotros p, .seccionNosotrosTextoHistoria p{
+    margin-top: 100px;
+    font-size: 25pt;
+}
+
+
+
+/*Sección Servicios*/
+
+.seccionTituloDos{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #F8CAFF;
+}
+
+.seccionTituloDos h5{
+    color: #F8CAFF;
+    font-size: 100pt;
+    font-weight: bolder;
+    margin: 50px 0px;
+}
+
+
+
+/*Galería Uno*/
+
+.galeriaUno .galeriaUnoLinkImg, .galeriaDos .galeriaDosLinkImg{
+    margin: 0 10px;
+}
+
+.slick-next{
+    right: -50px;
+    z-index: 2;
+}
+
+.slick-prev{
+    left: -50px;
+    z-index: 2;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-size: 50px;
+    opacity: 1;
+
+}
+
+.galeriaDos .galeriaDosLinkImg{
+    display: flex;
+    justify-content: center;
+}
+.galeriaDos .galeriaDosLinkImg img{
+    
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/*Banner*/
+
+.bannerUno, .bannerDos{
+    height: 300px;
+}
+
+.textoBannerUno, .textoBannerDos{
+    display: block;
+    font-size: 200pt;
+}
+
+
+
+/*Footer*/
+
+#foot1{grid-area: fot1;}
+#foot2{grid-area: fot2;}
+#foot3{grid-area: fot3;}
+#foot4{grid-area: fot4;}
+.footerGrid{
+    display: grid;
+    grid-template-areas:
+    "fot1 fot1"
+    "fot2 fot4"
+    "fot2 fot4"
+    "fot3 fot4"
+    "fot3 fot4";
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px 20px;
+    padding-top: 50px;
+    font-size: 15pt;
+    gap: 10px;
+}
+
+.footerH5{
+    font-size: 60pt;
+    margin-top: 50px;
+}
+
+.footerUl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footerUl li{
+    margin: 10px 0px;
+}
+
+.footerFormUp{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerFormDown{
+    align-self: center;
+}
+
+.footerFormMain{
+    margin-bottom: 20px;
+}
+
+.footerForm input[type=text], .footerForm input[type=email]{
+    margin: 0;
+    width:40%;
+}
+
+/* Div de créditos*/
+
+.credits {
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.credits p {
+    padding: 10px;
+}
+
+
+/* Página Proyectos / Sección Proyectos*/
+
+
+.containerProyectos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: 150px;
+    row-gap: 150px;
+    justify-items: center;
+}
+
+#proyectos1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#proyectos2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#proyectos3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#proyectos4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#proyectos5 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#proyectos6 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#proyectos7 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+#proyectos8 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+#proyectos9 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+
+/* Página Talentos / Sección Talentos*/
+
+
+.containerTalentos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: 150px;
+    row-gap: 150px;
+    justify-items: center;
+}
+
+#talentos1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#talentos2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#talentos3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#talentos4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#talentos5 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#talentos6 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#talentos7 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+#talentos8 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+#talentos9 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+/* Página Tienda / Sección Tienda*/
+
+
+.containerTienda {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    column-gap: 150px;
+    row-gap: 150px;
+    justify-items: center;
+}
+
+#tienda1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+} 
+
+#tienda2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#tienda3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#tienda4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#tienda5 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#tienda6 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#tienda7 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+#tienda8 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+#tienda9 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+/* Página de contacto */
+
+.contactoGrid{
+    display: grid;
+    grid-template-areas: 
+    "contact1 contact1"
+    "contact2 contact2"
+    "contact2 contact2"
+    "contact2 contact2"
+    "contact3 contact5"
+    "contact4 contact5";
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6,1fr);
+    height: 120vh; */
+    column-gap: 20px;
+    padding: 50px 0;
+}
+
+.call{
+    grid-area: contact1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.call h1{
+    margin: 0;
+}
+
+.contactoTitulo{
+    grid-area: contact2;
+}
+
+.contactoSubtitulo{
+    grid-area: contact3;
+}
+
+.contactoAnotacion{
+    grid-area: contact4;
+}
+
+.contactoRedes{
+    grid-area: contact5;
+}
+
+.contactoRedes .redes{
+    flex-direction: column;
+}
+
+
+.paginaNosotrosSeccionTexto{
+    height: fit-content;
+}
+
+.paginaNosotrosSeccionTexto h4{
+    font-size: 60pt;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.paginaNosotrosSeccionTexto p{
+    margin-top: 70px;
+    font-size: 25pt;
+}
+
+
+}
