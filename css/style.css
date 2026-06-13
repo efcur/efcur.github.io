@@ -126,6 +126,12 @@ main{
     width: 100%;
 }
 
+.backgroundtransparent{
+    background-color: #dfdfdf;
+    padding: 30px;
+
+}
+
 .workText{
     padding: 0 2rem;
     text-align: center;
