@@ -114,6 +114,11 @@ main{
     align-items: center;
 }
 
+.workCards:hover{
+    transform: scale(.98);
+    transition: all .3s ease-in-out;
+}
+
 .workCards a{
     text-decoration: none;
     color: #0f0f0f;
